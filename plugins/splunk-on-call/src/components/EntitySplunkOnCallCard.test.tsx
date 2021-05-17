@@ -13,6 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import React from 'react';
+import { act, fireEvent, render, waitFor } from '@testing-library/react';
 import { Entity } from '@backstage/catalog-model';
 import {
   alertApiRef,
@@ -25,8 +27,6 @@ import {
 } from '@backstage/core';
 import { EntityContext } from '@backstage/plugin-catalog-react';
 import { wrapInTestApp } from '@backstage/test-utils';
-import { act, fireEvent, render, waitFor } from '@testing-library/react';
-import React from 'react';
 import {
   splunkOnCallApiRef,
   SplunkOnCallClient,

@@ -13,7 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { Entity } from '@backstage/catalog-model';
+import React, { useCallback, useState } from 'react';
+import { useAsync } from 'react-use';
 import {
   configApiRef,
   EmptyState,
@@ -23,6 +24,7 @@ import {
   Progress,
   useApi,
 } from '@backstage/core';
+import { Entity } from '@backstage/catalog-model';
 import { useEntity } from '@backstage/plugin-catalog-react';
 import {
   Card,
@@ -34,8 +36,6 @@ import {
 import AlarmAddIcon from '@material-ui/icons/AlarmAdd';
 import WebIcon from '@material-ui/icons/Web';
 import { Alert } from '@material-ui/lab';
-import React, { useCallback, useState } from 'react';
-import { useAsync } from 'react-use';
 import { splunkOnCallApiRef, UnauthorizedError } from '../api';
 import { MissingApiKeyOrApiIdError } from './Errors/MissingApiKeyOrApiIdError';
 import { EscalationPolicy } from './Escalation';
