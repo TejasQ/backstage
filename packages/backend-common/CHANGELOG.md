@@ -1,5 +1,16 @@
 # @backstage/backend-common
 
+## 0.8.1
+
+### Patch Changes
+
+- 65e6c4541: Remove circular dependencies
+- 5001de908: Change GitlabUrlReader to SHA timestamp compare using only commits that modify given file path, if file path given
+- Updated dependencies [65e6c4541]
+- Updated dependencies [290405276]
+  - @backstage/integration@0.5.3
+  - @backstage/config-loader@0.6.2
+
 ## 0.8.0
 
 ### Minor Changes
